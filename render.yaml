@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: laporjatim-web
+    env: php
+    buildCommand: ""
+    startCommand: apache2-foreground
+    envVars:
+      - key: DB_DRIVER
+        value: "pgsql"
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: "5432"
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
